@@ -14,7 +14,7 @@ def sort_by_last_name(people, order):
     ['Bob Smith', 'Ken Jones', 'Alex Bradino']
     """
 
-    return sorted(people, key=lambda x: x.split()[1], reverse=order)
+    return sorted(people, key=lambda x: x.split()[1], reverse=order) #add key= if you want to do something other than the default (which would have been the first name)
 
 # problem 2
 # ------------------------------------------------------------------- #
