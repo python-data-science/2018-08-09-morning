@@ -13,14 +13,14 @@ def sort_by_last_name(people, order):
     # add doctests make sure it passes
 
     '''
-    >>> sort_by_last_name(['Bob Smith', 'Ken Jones', 'Alex Bradino'], 'ascending')
-    ['Alex Bradino', 'Ken Jones', 'Bob Smith']
+    >>> sort_by_last_name(['Bob Smith', 'Ken Jones', 'Alex Bradino'], 'descending')
+    ['Bob Smith', 'Ken Jones', 'Alex Bradino']
     '''
 
     if order == 'ascending':
         return(sorted(people, key=lambda x: x.split(" ")[-1]))
     if order == 'descending':
-        return(sorted(people, key=lambda x: x.split(" ")[1]))
+        return(sorted(people, key=lambda x: x.split(" ")[-1], reverse=True))
 
 
 
