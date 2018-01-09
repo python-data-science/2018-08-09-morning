@@ -48,4 +48,5 @@ def square_even_values_and_sum_under_10(numbers):
     >>> square_even_values_and_sum_under_10([5, 6, 7, 8, 9, 10, 11, 12])
     100
     """
-    return sum([x**2 for x in filter(lambda n: (n<10 and n%2==0), numbers)])
+    return sum([x**2 for x in filter(lambda n: (n < 10 and n%2 == 0), numbers)])
+
