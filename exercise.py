@@ -7,17 +7,18 @@ python -m doctest -v exercise.py
 
 people = ['Bob Smith', 'Ken Jones', 'Alex Bradino']
 
-def sort_by_last_name(people):
+def sort_by_last_name(people, order):
     """
     sorts list alphabetically
-    >>> sort_by_last_name(people)
+    >>> sort_by_last_name(people,False)
     ['Alex Bradino', 'Ken Jones', 'Bob Smith']
-
+    >>> sort_by_last_name(people,True)
+    ['Bob Smith', 'Ken Jones', 'Alex Bradino']
     """
     # return full names sorted by last name in ascending order
     # ['Alex Bradino', 'Ken Jones', 'Bob Smith']
     # add doctests make sure it passes
-    return sorted(sorted(people), key=lambda n: n.split()[1])
+    return sorted(people, key=lambda person: person.split()[-1], reverse=order)
 
 
 # problem 2
@@ -36,7 +37,7 @@ def create_dictionary_from_lists(names, ages):
     mydict = {}
     for i in range(len(names)):
         mydict[names[i]] = ages[i]
-
+    return mydict
 
 # problem 3
 # ------------------------------------------------------------------- #
