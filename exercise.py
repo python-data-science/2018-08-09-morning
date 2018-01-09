@@ -19,7 +19,7 @@ def sort_by_last_name(people):
         >>> sort_by_last_name(['Bob Smith', 'Ken Jones', 'Alex Bradino'])
         ['Alex Bradino', 'Ken Jones', 'Bob Smith']
     """
-    return sorted(people, key=lambda x: x.split(' ',1)[-1])
+    return sorted(people, key=lambda x: x.split(' ')[-1])
 
 
 # problem 2
