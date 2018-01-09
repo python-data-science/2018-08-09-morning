@@ -9,12 +9,9 @@ def sort_by_last_name(people, order):
         >>> sort_by_last_name(['Bob Smith', 'Ken Jones', 'Alex Bradino'], True)
         ['Smith, Bob', 'Jones, Ken', 'Bradino, Alex']
     """
-
-    for i in range(len(people)):
-            people[i] = people[i].split(" ")[1] +", " + people[i].split(" ")[0]
     # return full names sorted by last name in either ascending or descending order
     # add doctests make sure it passes
-    return sorted(people, reverse = order)
+    return sorted([n.split(" ")[1] +", " + n.split(" ")[0] for n in people], reverse = order)
 
 
 # problem 2
