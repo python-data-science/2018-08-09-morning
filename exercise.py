@@ -6,8 +6,22 @@ people = ['Bob Smith', 'Ken Jones', 'Alex Bradino']
 def sort_by_last_name(people, order):
     # return full names sorted by last name in either ascending or descending order
     # add doctests make sure it passes
-    pass
+    """
 
+    """
+    if order == 'asc':
+        order = True
+    else:
+        order = False
+
+    last_name_sort = sorted(list(zip([name.split()[1] for name in people], \
+                    [name.split()[0] for name in people])), reverse=order)
+
+    x = [' '.join(last_name_sort[x][0:2]) for x in range(len(last_name_sort))]
+
+    return x
+
+'''
 
 # problem 2
 # ------------------------------------------------------------------- #
@@ -30,3 +44,4 @@ def square_even_values_and_sum_under_10(numbers):
     # 6^2 + 8^2]
     # add doctests make sure it passes
     pass
+'''
