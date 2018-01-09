@@ -8,7 +8,7 @@ Run:
 people = ['Bob Smith', 'Ken Jones', 'Alex Bradino']
 
 
-def sort_by_last_name(people):
+def sort_by_last_name(people, order):
     """
     Sort by last names
 
@@ -19,7 +19,7 @@ def sort_by_last_name(people):
         >>> sort_by_last_name(['Bob Smith', 'Ken Jones', 'Alex Bradino'])
         ['Alex Bradino', 'Ken Jones', 'Bob Smith']
     """
-    return sorted(people, key=lambda x: x.split(' ')[-1])
+    return sorted(people, key=lambda person: person.split(' ')[-1], reverse = order)
 
 
 # problem 2
@@ -43,6 +43,8 @@ def create_dictionary_from_lists(names, ages):
     for k, v in zip(names, ages):
         d[k] = v
     return d
+
+    #{name:age for name, age in zip(names, ages)}
 
 
 
